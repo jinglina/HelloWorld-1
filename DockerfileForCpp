@@ -1,4 +1,4 @@
-FROM codenvy/cpp_gcc
+FROM frolvlad/alpine-gcc
 
 USER root
 RUN  mkdir /usr/src/cpp

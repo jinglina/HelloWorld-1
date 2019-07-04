@@ -1,4 +1,4 @@
-FROM gcc
+FROM codenvy/cpp_gcc
 
 USER root
 RUN  mkdir /usr/src/cpp

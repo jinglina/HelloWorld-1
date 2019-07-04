@@ -1,8 +1,5 @@
 pipeline {
     agent {label 'build'}
-    triggers {
-        cron('10 0 * * *')
-    }
     stages {
         stage('Preparation') {
                     steps{
@@ -24,7 +21,7 @@ pipeline {
             steps{
                 echo "2.login oc & docker regristry"
                 
-                sh "docker login -u '${loginName}' -p '${loginPassword}' http://10.7.12.250"
+                sh "docker login -u '${loginName}' -p '${loginPassword}' http://10.180.249.11:30002"
             }
 
         }
@@ -34,8 +31,8 @@ pipeline {
                 echo "3.Build Stage"
                 sh "gcc HelloWorld.c"
                 //sh "mvn clean build -DskipTests"
-                sh "docker build -f Dockerfile -t 10.7.12.250/nana_test/c++Tests:latest ."
-                sh "docker push 10.7.12.250/nana_test/c++Tests:latest"
+                sh "docker build -f Dockerfile -t 10.180.249.11:30002/library/c++Tests:latest ."
+                sh "docker push 10.180.249.11:30002/library/c++Tests:latest"
             }
         }
 

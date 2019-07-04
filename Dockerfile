@@ -1,4 +1,4 @@
-FROM gcc
+FROM 10.7.12.250/feiteng/arm64v8/openjdk:8-jdk
 
 RUN  mkdir /usr/src/myapp
 

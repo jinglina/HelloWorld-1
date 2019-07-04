@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'build'}
     triggers {
         cron('10 0 * * *')
     }

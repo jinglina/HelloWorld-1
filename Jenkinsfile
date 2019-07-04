@@ -32,7 +32,7 @@ pipeline {
         stage('Build') {
             steps{
                 echo "3.Build Stage"
-                sh "gcc HelloWorld.cpp"
+                sh "gcc HelloWorld.c"
                 //sh "mvn clean build -DskipTests"
                 sh "docker build -f Dockerfile -t 10.7.12.250/nana_test/c++Tests:latest ."
                 sh "docker push 10.7.12.250/nana_test/c++Tests:latest"

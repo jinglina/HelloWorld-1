@@ -1,12 +1,12 @@
-FROM 10.7.12.250/feiteng/arm64v8/openjdk:8-jdk
+FROM gcc
 
 USER root
 RUN  mkdir /usr/src/myapp
 
 COPY HelloWorld.c /usr/src/myapp
-
-RUN /usr/bin/gcc HelloWorld.c
+WORKDIR /usr/src/myapp
+RUN gcc HelloWorld.c
 
 CMD ["./a.out"]
 
-WORKDIR /usr/src/myapp 
+ 

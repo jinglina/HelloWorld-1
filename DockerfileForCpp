@@ -3,7 +3,7 @@ FROM frolvlad/alpine-gcc
 USER root
 RUN  mkdir /usr/src/mycpp
 
-COPY HelloWorld.c /usr/src/mycpp
+COPY HelloWorld.cpp /usr/src/mycpp
 WORKDIR /usr/src/mycpp
 RUN g++ HelloWorld.cpp -o hellocpp
 

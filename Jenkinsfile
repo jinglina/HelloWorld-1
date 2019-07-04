@@ -31,8 +31,8 @@ pipeline {
                 echo "3.Build Stage"
                 // sh "gcc HelloWorld.c"
                 //sh "mvn clean build -DskipTests"
-                sh "docker build -f Dockerfile -t 10.180.249.11:30002/library/cTests:latest ."
-                sh "docker push 10.180.249.11:30002/library/cTests:latest"
+                sh "docker build -f Dockerfile -t 10.180.249.11:30002/library/ctests:latest ."
+                sh "docker push 10.180.249.11:30002/library/ctests:latest"
             }
         }
 

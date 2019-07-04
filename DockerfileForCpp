@@ -1,10 +1,10 @@
-FROM frolvlad/alpine-gcc
+FROM gcc
 
 USER root
-RUN mkdir /usr/src/mycpp
+RUN  mkdir /usr/src/cpp
 
-COPY HelloWorld.cpp /usr/src/mycpp
-WORKDIR /usr/src/mycpp
-RUN g++ HelloWorld.cpp -o hellocpp
+COPY HelloWorld.cpp /usr/src/cpp
+WORKDIR /usr/src/cpp
+RUN gcc HelloWorld.cpp
 
-CMD ["./hellocpp"]
+CMD ["./a.out"]
